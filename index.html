@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Worksheets - Level Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="container">
+        <h1>Test Your English Level!</h1>
+        <p>Choose the proficiency level you want to start with:</p>
+
+        <div class="level-selection">
+            <button class="level-btn" data-level="B1">Level B1 (Pre-Intermediate)</button>
+            <button class="level-btn" data-level="B2">Level B2 (Upper-Intermediate)</button>
+            <button class="level-btn" data-level="C1">Level C1 (Advanced)</button>
+            <button class="level-btn" data-level="C2">Level C2 (Proficiency)</button>
+        </div>
+        
+        <div class="app-signature">
+            App Developed and Owned by Teacher Gabriela Neculai
+        </div>
+    </div>
+
+    <div id="quiz-screen" class="container hidden">
+        <h2 id="quiz-title">Level Quiz</h2>
+        
+        <div id="progress">Question <span id="current-question-number">0</span> of <span id="total-questions">0</span></div>
+        
+        <div class="question-container">
+            <p id="question-text"></p>
+        </div>
+
+        <div id="options-container" class="options-grid">
+            </div>
+
+        <div id="feedback-panel" class="feedback hidden">
+            <p id="feedback-message"></p>
+            <div id="explanation-text"></div>
+        </div>
+
+        <div class="quiz-actions">
+            <button id="next-btn" class="main-btn action-next" disabled>Next Question</button>
+            
+            <button id="end-test-btn" class="main-btn action-end">Finish Test / Show Results</button>
+        </div>
+
+        <div class="app-signature">
+            App Developed and Owned by Teacher Gabriela Neculai
+        </div>
+    </div>
+
+    <div id="results-screen" class="container hidden">
+        <h2>Test Results</h2>
+        <p>You have completed the <span id="final-level"></span> test!</p>
+        
+        <p style="font-size: 1.1em; font-weight: bold; margin-top: 20px;">
+            Correct Answers: <span id="score-display">0</span> out of <span id="max-score">0</span>
+            (<span id="percentage-display">0%</span>)
+        </p>
+
+        <div id="encouragement-message" style="margin-top: 25px; padding: 15px; border-radius: 8px; background-color: #e9ecef; border: 1px solid #ced4da; font-size: 1.1em; text-align: center;">
+            </div>
+        
+        <button id="print-btn" class="main-btn print-button" style="margin-top: 20px; background-color: #345995;">Print/Save PDF Report</button>
+
+        <button id="restart-btn" class="main-btn" style="margin-top: 10px;">Start a New Quiz</button>
+
+        <div class="app-signature">
+            App Developed and Owned by Teacher Gabriela Neculai
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

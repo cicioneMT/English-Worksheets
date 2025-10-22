@@ -1,0 +1,275 @@
+/* Importarea unui font modern și curat de pe Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 1. Reset și Stiluri de Bază */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fcfcfc; /* Alb Neutru/Bej */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Stilul general pentru containerele principale (ecrane) */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #345995; /* Albastru Maritim */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Utilitar pentru ascunderea elementelor */
+.hidden {
+    display: none !important;
+}
+
+/* Stil pentru Mesajul de Proprietate (App Signature) */
+.app-signature {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #6c757d;
+    border-top: 1px solid #e0e0e0; /* Linie subțire pentru separare */
+}
+
+/* 2. Ecranul de Start (Selecția Nivelului) */
+.level-selection {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.level-btn {
+    padding: 15px;
+    border: 2px solid #345995;
+    border-radius: 8px;
+    background-color: #ebf2ff; /* Albastru Foarte Deschis */
+    color: #345995;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.level-btn:hover {
+    background-color: #cce0ff;
+    transform: translateY(-2px);
+}
+
+/* 3. Ecranul de Test */
+#progress {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+/* Container pentru a ține butoanele Next și End Test */
+.quiz-actions {
+    display: grid;
+    grid-template-columns: 1fr; /* implicit, butoanele sunt pe o singură coloană (pentru mobil) */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* TRANZIȚIE: Aplicată pe containerul principal al întrebării */
+.question-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: opacity 0.3s ease-in-out; 
+}
+
+/* Stil pentru opțiunile de răspuns */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: block; 
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #f1f1f1;
+    border-color: #345995;
+}
+
+/* 4. Secțiunea de Feedback Imediat */
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Când răspunsul este CORECT */
+.feedback.correct {
+    background-color: #e5f5f3;
+    color: #155724;
+    border: 1px solid #84dcc6;
+}
+
+/* Când răspunsul este GRESIT */
+.feedback.incorrect {
+    background-color: #fff0f0;
+    color: #721c24;
+    border: 1px solid #ff686b;
+}
+
+#explanation-text {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ced4da;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* 5. Stiluri pentru Butoanele Principale (Next, Restart, End Test) */
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #45b5aa; /* Verde Mentă/Salvie */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Butonul NOU: Finish Test/Show Results (folosim o culoare neutră sau secundară) */
+.action-end {
+    background-color: #6c757d; /* Gri pentru acțiune secundară */
+}
+
+.action-end:hover {
+    background-color: #5a6268;
+}
+
+/* Butonul de Print/PDF */
+#print-btn {
+    background-color: #345995 !important; /* Albastru Maritim */
+}
+
+.main-btn:hover:not(:disabled) {
+    background-color: #3aa095;
+}
+
+.action-next:hover:not(:disabled) {
+    background-color: #3aa095;
+}
+
+.main-btn:disabled {
+    background-color: #adb5bd; /* Gri deschis când este dezactivat */
+    cursor: not-allowed;
+}
+
+/* 6. Stiluri Aplicare de JavaScript (pentru a marca răspunsurile) */
+.correct-answer {
+    background-color: #84dcc6;
+    color: #111;
+    font-weight: 700;
+    border-color: #84dcc6;
+}
+
+.incorrect-answer {
+    background-color: #ff686b;
+    color: white;
+    font-weight: 700;
+    border-color: #ff686b;
+}
+
+/* 7. Adaptare pentru Mobil (Rămâne standard) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px 15px;
+        margin-top: 0;
+    }
+}
+
+/* 8. Ajustări pentru Ecrane Mari (PC/Tablă Interactivă) */
+@media (min-width: 900px) {
+    .container {
+        font-size: 1.1em;
+    }
+    
+    .option-btn {
+        padding: 18px; 
+        font-size: 1.1em;
+    }
+    
+    .question-container p {
+        font-size: 1.3em;
+    }
+
+    /* Pe desktop, butoanele Next și End Test sunt una lângă alta */
+    .quiz-actions {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+/* 9. Reguli Speciale pentru Imprimare (Print/PDF) */
+@media print {
+    body {
+        background-color: #fff !important;
+        color: #000;
+        min-height: auto;
+    }
+    
+    .container {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    /* Ascunde toate elementele de interfață la printare */
+    .level-selection,
+    #quiz-screen,
+    .print-button, 
+    #restart-btn,
+    .app-signature,
+    .quiz-actions { 
+        display: none !important;
+    }
+
+    #results-screen {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
