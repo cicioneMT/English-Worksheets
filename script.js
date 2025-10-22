@@ -1,18 +1,310 @@
 // 1. Baza de Date a Întrebărilor
 const quizData = {
-    // Level B1 (Pre-Intermediate)
+    // -----------------------------------------------------------------
+    // Nivel B1 (Pre-Intermediate) - 50 Questions (Grammar & Vocabulary)
+    // -----------------------------------------------------------------
     B1: [
+        // GRAMMAR (Prezent Simplu, Continuu, Trecut, Viitor, Condițional, Modale)
         {
-            question: "Choose the correct preposition: She is good ____ playing the piano.",
-            options: ["at", "on", "in", "with"],
-            answer: "at",
-            explanation: "The correct preposition is 'at'. The standard idiom to show ability (to be good/bad at something) is **'good at'** / **'bad at'**."
+            question: "I ____ to the gym three times a week.",
+            options: ["go", "am going", "goes", "went"],
+            answer: "go",
+            explanation: "We use the **Present Simple** ('go') for habits and routines, indicated by the frequency phrase 'three times a week'."
         },
         {
-            question: "Complete the sentence with the correct form: If I had more money, I ____ a new car.",
-            options: ["will buy", "would buy", "buy", "bought"],
-            answer: "would buy",
-            explanation: "This is a Second Conditional sentence, used for hypothetical or unrealistic situations in the present. The structure is: **If + Past Simple, ... would + Verb Base Form**."
+            question: "She can't talk right now, she ____ a shower.",
+            options: ["takes", "is taking", "took", "take"],
+            answer: "is taking",
+            explanation: "The **Present Continuous** ('is taking') is used for actions happening at the moment of speaking ('right now')."
+        },
+        {
+            question: "They ____ dinner at a restaurant last night.",
+            options: ["have", "had", "are having", "was having"],
+            answer: "had",
+            explanation: "The time expression 'last night' requires the **Past Simple** form of the verb 'to have', which is 'had'."
+        },
+        {
+            question: "If I found a wallet, I ____ it to the police.",
+            options: ["will return", "would return", "return", "returned"],
+            answer: "would return",
+            explanation: "This is a **Second Conditional** sentence (hypothetical). The structure is: If + Past Simple, ... would + Verb Base Form."
+        },
+        {
+            question: "We ____ to Spain next summer.",
+            options: ["going", "will go", "go", "are going"],
+            answer: "are going",
+            explanation: "The **Present Continuous** ('are going') is used for fixed future arrangements or plans, often indicated by a future time marker like 'next summer'."
+        },
+        {
+            question: "You ____ smoke in the office. It's forbidden.",
+            options: ["mustn't", "can't", "don't have to", "shouldn't"],
+            answer: "mustn't",
+            explanation: "**'Mustn't'** is the correct modal verb to express a strong prohibition or rule ('It's forbidden')."
+        },
+        {
+            question: "This book was written ____ a famous author.",
+            options: ["with", "by", "from", "of"],
+            answer: "by",
+            explanation: "In the **Passive Voice**, the agent (the person doing the action) is introduced by the preposition **'by'**."
+        },
+        {
+            question: "How long ____ you been learning English?",
+            options: ["do", "did", "have", "are"],
+            answer: "have",
+            explanation: "The phrase 'How long' indicates the need for the **Present Perfect Continuous** (or Simple), which uses the auxiliary verb **'have'**."
+        },
+        {
+            question: "He arrived late ____ the heavy traffic.",
+            options: ["despite", "because", "because of", "although"],
+            answer: "because of",
+            explanation: "**'Because of'** is followed by a noun phrase ('the heavy traffic'), whereas 'because' and 'although' are followed by a clause (subject + verb)."
+        },
+        {
+            question: "I think the weather ____ nice tomorrow.",
+            options: ["is", "is going to be", "will be", "be"],
+            answer: "will be",
+            explanation: "**'Will'** is used for simple predictions, especially when based on opinion or assumption ('I think')."
+        },
+        {
+            question: "There are ____ people waiting outside the bank.",
+            options: ["much", "a lot", "too many", "too much"],
+            answer: "too many",
+            explanation: "**'Too many'** is used with countable nouns like 'people'. 'Too much' is for uncountable nouns."
+        },
+        {
+            question: "The movie was ____ interesting than the book.",
+            options: ["less", "least", "fewer", "little"],
+            answer: "less",
+            explanation: "**'Less'** is the comparative form of 'little' and is used with adjectives and uncountable nouns ('interesting' is an adjective here)."
+        },
+        {
+            question: "He told me ____ quiet.",
+            options: ["to be", "be", "being", "is"],
+            answer: "to be",
+            explanation: "The structure for reported commands/requests is usually verb + object + **infinitive with 'to'**."
+        },
+        {
+            question: "She's used to ____ early every day.",
+            options: ["get up", "getting up", "got up", "get used to"],
+            answer: "getting up",
+            explanation: "The phrase **'be used to'** (meaning accustomed to) is followed by the **gerund** (verb + -ing)."
+        },
+        {
+            question: "I wish I ____ taller.",
+            options: ["am", "was", "were", "would be"],
+            answer: "were",
+            explanation: "**'I wish'** about a present situation uses the **Past Simple** or **'were'** for the verb 'to be' (even for I, He, She, It)."
+        },
+        {
+            question: "I haven't finished my homework ____.",
+            options: ["just", "already", "yet", "ever"],
+            answer: "yet",
+            explanation: "**'Yet'** is used with negative statements and questions in the Present Perfect, usually placed at the end of the sentence."
+        },
+        {
+            question: "I'd like a coffee, and my friend would like one ____.",
+            options: ["too", "either", "neither", "as well"],
+            answer: "as well",
+            explanation: "Both 'too' and **'as well'** mean 'also' and are used in affirmative sentences, usually at the end. 'As well' is often considered slightly more formal than 'too'."
+        },
+        {
+            question: "They promised ____ the repairs by Monday.",
+            options: ["finish", "finishing", "to finish", "finished"],
+            answer: "to finish",
+            explanation: "The verb **'promise'** is usually followed by the **infinitive with 'to'**."
+        },
+        {
+            question: "The teacher made the students ____ their books.",
+            options: ["open", "to open", "opening", "opened"],
+            answer: "open",
+            explanation: "The causative verb **'make'** is followed by the **bare infinitive** (infinitive without 'to')."
+        },
+        {
+            question: "We saw a girl ____ through the park.",
+            options: ["walked", "walk", "to walk", "walking"],
+            answer: "walking",
+            explanation: "The pattern 'see/watch/hear + object + **-ing form**' means we observed the action in progress."
+        },
+        {
+            question: "I'm interested ____ learning more about history.",
+            options: ["in", "at", "on", "for"],
+            answer: "in",
+            explanation: "The correct preposition that follows the adjective 'interested' is **'in'**."
+        },
+        {
+            question: "It was the ____ interesting film I've ever seen.",
+            options: ["most", "more", "much", "many"],
+            answer: "most",
+            explanation: "The phrase 'I've ever seen' indicates the need for the **Superlative** form, which uses **'most'** for long adjectives ('most interesting')."
+        },
+        {
+            question: "The man ____ car was stolen called the police.",
+            options: ["who", "which", "whose", "whom"],
+            answer: "whose",
+            explanation: "**'Whose'** is the correct relative pronoun used to show possession."
+        },
+        {
+            question: "He can't afford ____ on holiday this year.",
+            options: ["go", "to go", "going", "goes"],
+            answer: "to go",
+            explanation: "The verb **'afford'** is followed by the **infinitive with 'to'**."
+        },
+        {
+            question: "I ____ never been to Italy.",
+            options: ["am", "do", "have", "will"],
+            answer: "have",
+            explanation: "The adverb 'never' in this context (life experience) requires the **Present Perfect** tense, using the auxiliary verb **'have'**."
+        },
+        // VOCABULARY & PHRASAL VERBS
+        {
+            question: "I need to look ____ my old notes before the exam.",
+            options: ["up", "at", "for", "over"],
+            answer: "over",
+            explanation: "The phrasal verb **'look over'** means to quickly examine or check something, often before an important event like an exam."
+        },
+        {
+            question: "She was really ____ when she failed the driving test.",
+            options: ["delighted", "disappointed", "amazed", "cheerful"],
+            answer: "disappointed",
+            explanation: "**'Disappointed'** means feeling unhappy because something you hoped for did not happen ('failing the test')."
+        },
+        {
+            question: "The opposite of 'polite' is ____.",
+            options: ["impolite", "non-polite", "unpolite", "dispolite"],
+            answer: "impolite",
+            explanation: "The correct negative prefix to form the opposite of 'polite' is **'im-'**."
+        },
+        {
+            question: "My colleague asked me to help him ____ a business trip.",
+            options: ["arrange", "put", "make", "take"],
+            answer: "arrange",
+            explanation: "The correct verb is **'arrange'** a trip/meeting/appointment, meaning to organize it."
+        },
+        {
+            question: "Don't forget to switch ____ the lights when you leave the room.",
+            options: ["on", "out", "off", "up"],
+            answer: "off",
+            explanation: "The phrasal verb **'switch off'** means to turn off a device or a light."
+        },
+        {
+            question: "It's important to have a good ____ of your time when studying.",
+            options: ["control", "management", "way", "habit"],
+            answer: "management",
+            explanation: "The common collocation is **'time management'**, referring to the ability to use one's time effectively."
+        },
+        {
+            question: "We live in a quiet residential ____ near the city centre.",
+            options: ["area", "land", "zone", "field"],
+            answer: "area",
+            explanation: "**'Area'** is the most general and appropriate word for a part of a town or city, especially when talking about a 'residential' one."
+        },
+        {
+            question: "I need to buy a new ____ of trainers for running.",
+            options: ["set", "pair", "piece", "couple"],
+            answer: "pair",
+            explanation: "The collective noun for things that come in two matched parts (shoes, socks, glasses) is **'pair'**."
+        },
+        {
+            question: "Can you ____ me a favour and pick up my dry cleaning?",
+            options: ["do", "make", "give", "help"],
+            answer: "do",
+            explanation: "The correct collocation is **'do me a favour'** (a face un serviciu)."
+        },
+        {
+            question: "The company decided to ____ some new staff.",
+            options: ["hire", "employ", "fire", "resign"],
+            answer: "hire",
+            explanation: "**'Hire'** (sau 'employ') means to give someone a job. 'Fire' is the opposite, and 'resign' means to quit."
+        },
+        {
+            question: "The food was so ____, I couldn't eat it.",
+            options: ["delicious", "tasty", "horrible", "sweet"],
+            answer: "horrible",
+            explanation: "**'Horrible'** (sau 'awful') means extremely unpleasant, which fits the context 'I couldn't eat it'."
+        },
+        {
+            question: "I'm really looking forward ____ my holiday next month.",
+            options: ["to", "at", "for", "on"],
+            answer: "to",
+            explanation: "The correct preposition for the idiom 'look forward to' (a aștepta cu nerăbdare) is **'to'**."
+        },
+        {
+            question: "Could you speak a little louder? I can't ____ you.",
+            options: ["hear", "listen", "sound", "feel"],
+            answer: "hear",
+            explanation: "**'Hear'** is the verb that means to perceive sound (physical ability), which fits the context 'I can't [perceive the sound of] you'."
+        },
+        {
+            question: "The main ____ of the book is set in London.",
+            options: ["place", "scene", "setting", "plot"],
+            answer: "setting",
+            explanation: "**'Setting'** refers to the time, place, and circumstances in which a story takes place."
+        },
+        {
+            question: "I'm going to take a ____ in the lake this afternoon.",
+            options: ["swim", "bathe", "shower", "dip"],
+            answer: "swim",
+            explanation: "The common collocation for physical activity in water is **'take a swim'**."
+        },
+        {
+            question: "They had a huge ____ about politics.",
+            options: ["discussion", "chat", "argument", "talk"],
+            answer: "argument",
+            explanation: "**'Argument'** suggests a disagreement or dispute, which is usually 'huge' or 'heated', unlike a simple 'discussion' or 'chat'."
+        },
+        {
+            question: "It was raining heavily, ____ we decided to stay indoors.",
+            options: ["but", "so", "because", "although"],
+            answer: "so",
+            explanation: "**'So'** is used to introduce the result or consequence of a previous action or state ('It was raining heavily... as a result, we stayed indoors')."
+        },
+        {
+            question: "What's the best way to ____ up new vocabulary?",
+            options: ["pick", "learn", "find", "collect"],
+            answer: "pick",
+            explanation: "**'Pick up'** is a common phrasal verb meaning to learn something naturally or casually."
+        },
+        {
+            question: "I've been feeling quite ____ lately, maybe I should see a doctor.",
+            options: ["healthy", "well", "unwell", "sickly"],
+            answer: "unwell",
+            explanation: "**'Unwell'** is a polite adjective meaning slightly ill, which fits the suggestion of seeing a doctor."
+        },
+        {
+            question: "You should ____ care of your grandfather.",
+            options: ["take", "make", "give", "do"],
+            answer: "take",
+            explanation: "The correct collocation is **'take care of'** (a avea grijă de)."
+        },
+        {
+            question: "The flight was delayed ____ fog.",
+            options: ["due to", "because", "despite", "so"],
+            answer: "due to",
+            explanation: "**'Due to'** is followed by a noun ('fog') and means 'because of'."
+        },
+        {
+            question: "Could you possibly ____ me some money until tomorrow?",
+            options: ["borrow", "lend", "rent", "owe"],
+            answer: "lend",
+            explanation: "**'Lend'** means to give something to someone temporarily. 'Borrow' means to take something from someone temporarily."
+        },
+        {
+            question: "I need a large ____ of milk for this recipe.",
+            options: ["portion", "amount", "number", "piece"],
+            answer: "amount",
+            explanation: "**'Amount'** is used with uncountable nouns like 'milk'. 'Number' is for countable nouns."
+        },
+        {
+            question: "The main ____ of the movie is about overcoming challenges.",
+            options: ["topic", "theme", "subject", "story"],
+            answer: "theme",
+            explanation: "The **'theme'** is the underlying subject, idea, or message of a piece of work."
+        },
+        {
+            question: "If you don't ____ up your room, you can't go out.",
+            options: ["clear", "tidy", "put", "arrange"],
+            answer: "tidy",
+            explanation: "The phrasal verb **'tidy up'** means to make a place neat by arranging things."
         }
     ],
 
