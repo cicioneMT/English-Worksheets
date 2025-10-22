@@ -1206,7 +1206,8 @@ C2: [
         answer: "prerequisite",
         explanation: "**'Prerequisite'** (C2 noun, condiție prealabilă) is a formal noun that must be met before something else is possible."
     }
-],
+]
+};
 
 // 2. Mesajele de Încurajare
 const encouragementMessages = [
